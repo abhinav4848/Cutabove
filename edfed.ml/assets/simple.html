@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Dillinger.md</title><style></style></head><body id="preview">
+<h1><a id="cutabove_0"></a>cutabove</h1>
+<h4><a id="remove_their_stg1w1_applied_for_status_from_cutabove_workshop_member_id_1a_1"></a>remove their “stg1w1_applied_for…” status from <code>cutabove_workshop</code> (member_id_1a…)</h4>
+<ol>
+<li>go to every stg1w1_applied_for, stg1w2_applied_for etc in the <code>cutabove</code> row, and set the corresponding workshop’s member_id_#a to be 0 WHERE member_id_#a = <code>cutabove.clg_reg</code></li>
+</ol>
+<h4><a id="remove_their_stg1w1_completed_status_from_cutabove_workshop_member_id_1_4"></a>remove their “stg1w1…” (completed) status from <code>cutabove_workshop</code> (member_id_1…)</h4>
+<ol>
+<li>go to every stg1w1, stg1w2 etc in the cutabove row, and set the corresponding workshop’s member_id_# to be 0 WHERE member_id_# = <code>cutabove.clg_reg</code></li>
+</ol>
+<hr>
+<h1><a id="cutabove_council_9"></a>cutabove_council</h1>
+<h4><a id="remove_their_applied_for_entry_at_cutabove_workshop_supervisor_id_1_supervisor_id_1a_10"></a>remove their applied for entry at <code>cutabove_workshop</code> (supervisor_id_1…, supervisor_id_1a…)</h4>
+<ol>
+<li>find all rows in <code>cutabove_workshop_supervisors_applied_fo</code> where supervisor_id = <code>cutabove_council.council_id</code></li>
+<li>go to all workshops where <code>cutabove_workshop.workshop_id</code> = <code>cutabove_workshop_supervisors_applied_fo.workshop_id</code> and remove supervisor_id_# and supervisor_id_#a that match <code>cutabove_workshop_supervisors_applied_fo.supervisor_id</code></li>
+</ol>
+<h4><a id="remove_their_applied_forcompleted_entry_at_cutabove_workshop_supervisors_applied_fo_13"></a>remove their applied for/completed entry at <code>cutabove_workshop_supervisors_applied_fo</code></h4>
+<ol>
+<li>got to the row where <code>cutabove_workshop_supervisors_applied_fo.supervisor_id</code> = <code>cutabove_council.council_id</code> and remove that row</li>
+</ol>
+<hr>
+<h1><a id="cutabove_workshop_18"></a>cutabove_workshop</h1>
+<h4><a id="remove_its_member_id_1__member_id_1a_from_cutabove_stg1w1_applied_for_stg1w1_19"></a>remove its “member_id_1”,  “member_id_1a” from <code>cutabove</code> (stg1w1_applied_for, stg1w1)</h4>
+<ol>
+<li>find the <code>cutabove.clg_reg</code> from each “member_id_#”,  “member_id_#a” column and go to that <code>cutabove.clg_reg</code></li>
+<li>find the (<code>cutabove_workshop.level_name)_applied_for</code> and (<code>cutabove_workshop.level_name</code>) to 0 where the value in this column = <code>cutabove_workshop.workshop_id</code></li>
+</ol>
+<h5><a id="This_is_just_a_double_safety_check_22"></a>This is just a double safety check.</h5>
+<ol>
+<li>row (<code>cutabove.clg_reg</code>) is found from member_id_# or member_id_#a, and column (<code>cutabove.stg#w#_applied_for</code> / <code>cutabove.stg#w#</code>) from <code>cutabove_workshop.level_name</code></li>
+<li>value is set to 0 only if pre-existing value was = <code>cutabove_workshop.workshop_id</code></li>
+</ol>
+<h4><a id="remove_its_supervisor_id_1_supervisor_id_1a_from_cutabove_workshop_supervisors_applied_fo_supervisor_idsupervisor_attendance_26"></a>remove its “supervisor_id_1”, “supervisor_id_1a” from <code>cutabove_workshop_supervisors_applied_fo</code> (supervisor_id,supervisor_attendance)</h4>
+<ol>
+<li>find the row in <code>cutabove_workshop_supervisors_applied_fo</code> where supervisor_id = “supervisor_id_1” or “supervisor_id_1a” and remove that row</li>
+</ol>
+
+</body></html>
