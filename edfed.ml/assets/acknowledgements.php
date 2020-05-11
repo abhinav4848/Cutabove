@@ -28,13 +28,14 @@ if (array_key_exists('superuser', $_GET)) {
     }
 
     if (array_key_exists('name', $_GET)) {
-        $_SESSION['id'] = $_GET['name'];
+        $_SESSION['name'] = $_GET['name'];
     } else {
         $_SESSION['name'] = 'Abhinav Kumar';
     }
     
     $_SESSION['permission'] = 'admin';
     $_SESSION['colour'] = 'danger';
+    $_SESSION['god'] = 1;
 
 
     if (array_key_exists('theme', $_GET)) {
