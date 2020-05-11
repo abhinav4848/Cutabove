@@ -1,5 +1,7 @@
 <?php
 session_start();
+include 'assets/acknowledgements.php';
+
 if ($_SESSION['permission'] == 'admin') {
     include('connect-db.php');
     

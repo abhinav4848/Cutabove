@@ -1,5 +1,8 @@
 <?php
 session_start();
+include 'assets/acknowledgements.php';
+
+
 $getid = ''; //doing this since there are 2 ways a member's id can be worked on (admin & supervisor using get['id'] vs Member using session['id']. I needn't worry about which method is used once I set $getid to the id value through either method. Rest of the program uses getid ather than get['id'] or session['id']
 $stg1c=0; //for enabling stage 2, this value is checked instead of database
 $stg2c=$stg3c=$stg4c=0;

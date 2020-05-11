@@ -1,5 +1,6 @@
 <?php $url = $_SERVER['REQUEST_URI'] //returns something like /add-new.php?>
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="index.php">Hello, <?php echo strtok($_SESSION['name'], " ");
     if ($_SESSION['permission'] == 'admin') {
@@ -62,9 +63,16 @@
                     }
 
                     echo '<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="add-new.php">Add New</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="all-people.php?kit=0">Approval Pending</a>
+					<a class="dropdown-item" href="add-new.php">Add New</a>';
+
+                    if (strpos($url, '/certificate.php')!== false) {
+                        echo '<a class="dropdown-item" href="#">Certificate (Current)</a>';
+                    } else {
+                        echo '<a class="dropdown-item" href="certificate.php?id='.$row['id'].'">View Certificate</a>';
+                    }
+                    
+                    echo '<div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="all-people.php?kit=0">Approval Pending</a>
 					<a class="dropdown-item" href="all-people.php?kit=100">Approved</a>
 					<a class="dropdown-item" href="all-people.php?kit=2">Rejected</a>
 					<a class="dropdown-item" href="all-people.php?kit=3">Debarred</a>
@@ -72,7 +80,7 @@
 					<a class="dropdown-item" href="all-people.php?kit=5">Discontinued</a>
 					<a class="dropdown-item" href="all-people.php?kit=6">Status Unknown</a>';
                     ;
-
+                    
                     if ($_SESSION['god']== 1) {
                         echo '<div class="dropdown-divider"></div>';
                         echo '<a class="dropdown-item text-danger" href="deletion.php?clg_reg='.$row['clg_reg'].'">Delete this member</a>';

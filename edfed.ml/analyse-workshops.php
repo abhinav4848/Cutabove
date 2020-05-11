@@ -1,5 +1,8 @@
 <?php
 session_start();
+include 'assets/acknowledgements.php';
+
+
 if ($_SESSION['permission'] == 'admin') {
     include('connect-db.php');
     if (array_key_exists('start_date', $_GET) and array_key_exists("end_date", $_GET)) {

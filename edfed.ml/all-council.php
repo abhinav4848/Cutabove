@@ -1,5 +1,7 @@
 <?php
 session_start();
+include 'assets/acknowledgements.php';
+
 if ($_SESSION['permission'] == 'admin' or $_SESSION['permission'] == 'supervisor') {
     include('connect-db.php');
     if (array_key_exists('list', $_GET)) {

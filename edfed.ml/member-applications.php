@@ -6,6 +6,9 @@
 
 <?php
 session_start();
+
+include 'assets/acknowledgements.php';
+
 if ($_SESSION['permission'] == 'admin' or $_SESSION['permission'] == 'supervisor') {
     include('connect-db.php');
 

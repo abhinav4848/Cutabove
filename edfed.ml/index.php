@@ -2,6 +2,7 @@
 session_start();
 $error="";
 include 'connect-db.php';
+include 'assets/acknowledgements.php';
 
 if (array_key_exists("logout", $_GET)) {
     session_unset($_SESSION);
@@ -192,6 +193,7 @@ if (array_key_exists("submit", $_POST)) {
 
 <body>
     <div class="container">
+        <!-- Nested divs for vertical centering: https://stackoverflow.com/a/6182661/2365231 -->
         <div class="outer">
             <div class="middle">
                 <div class="inner">

@@ -1,5 +1,8 @@
 <?php
 session_start();
+include 'assets/acknowledgements.php';
+
+
 $row='';
 $view_Supervisor_Oriented_buttons = 0;
 if ($_SESSION['permission'] == 'supervisor') {

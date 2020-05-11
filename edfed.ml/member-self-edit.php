@@ -2,6 +2,9 @@
 session_start();
 date_default_timezone_set("Asia/Kolkata");
 
+include 'assets/acknowledgements.php';
+
+
 //if admin has accessed the page, see if the id has been sent by $_GET, then show the user data by $_GET['id']
 //if user has logged in, show his own data using $_SESSION['id']
 if (array_key_exists("id", $_SESSION) and $_SESSION['permission'] == 'admin') {

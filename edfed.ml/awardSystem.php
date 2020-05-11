@@ -25,7 +25,7 @@ function awardSystem($row)
                     $award3.='<i class="fas fa-star" style="color:#FFD700" title="Gold (stg'.$i.'w'.$j.')"></i>';
                 }
                 if ($i==4) {
-                    $award4.='<i class="fas fa-star" style="color:#e5e4e2" title="Platinum (stg'.$i.'w'.$j.')"></i>';
+                    $award4.='<i class="fas fa-medal" style="color:#e5e4e2" title="Platinum (stg'.$i.'w'.$j.')"></i>';
                 }
                 if ($i==5) {
                     $award5.='<i class="fas fa-crown" style="color:#b9f2ff" title="Crown (stg'.$i.'w'.$j.')"></i>';
