@@ -2,7 +2,7 @@
 session_start();
 $error="";
 include 'connect-db.php';
-include 'assets/acknowledgements.php';
+// include 'assets/acknowledgements.php';
 
 if (array_key_exists("logout", $_GET)) {
     session_unset($_SESSION);
@@ -280,6 +280,8 @@ if (array_key_exists("submit", $_POST)) {
                         <input type="hidden" name="permission" value="admin">
                         <button type="submit" name="submit" class="btn btn-danger">Admin Log In</button>
                     </form>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2018-<?php echo date("Y"); ?>, <a
+                            href="https://abhinavkr.com" target="_blank">Abhinav Kumar</a>, Amit Sattigeri </p>
                 </div><!-- Inner -->
             </div><!-- Middle -->
         </div><!-- outer -->

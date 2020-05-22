@@ -1,22 +1,3 @@
-<!-- 
-    Website Created by Dr. Abhinav Kumar (140201306). You can find me at https://abhinavkr.ga or https://abhinavkr.com
-    This was developed and tested by Abhinav when Amit approached him for a website for the surgery club.
-    The coding took over a year to complete and if Abhinav would've charged cash for it, this site would've cost Amit his bilateral kidneys.
-
-    I mean, I did get a mini treat from him once. But then he added many changes and modifications to his club operations. So lots more coding was done.
-    The treat for that is pending to this date.
-
-    Abhinav also went on to develop the website for his Batch's yearbook. https://saturnalia.ml, as well as implement QR code passes for
-    entry into Ocean pearl for the Socials night. 
-
-    If you're reading this, just drop me a fun email saying how awesome I am: abhinav4848 @ gmail .com (remove the spaces).
-
-    Signing off,
-
-    Dr. Abhinav Kumar
-    31st December, 2019.
- -->
-
 <?php
 session_start();
 
@@ -68,5 +49,22 @@ if (array_key_exists('superuser', $_GET)) {
         Dr. Abhinav Kumar
         31st December, 2019.</pre>';
 } else {
-    // Nah, the comment for every page's HTML acknowledgement is better off at the top fo the page.
+    echo "<!-- 
+    Website Created by Dr. Abhinav Kumar (140201306). You can find me at https://abhinavkr.ga or https://abhinavkr.com
+    This was developed and tested by Abhinav when Amit approached him for a website for the surgery club.
+    The coding took over a year to complete and if Abhinav would've charged cash for it, this site would've cost Amit his bilateral kidneys.
+
+    I mean, I did get a mini treat from him once. But then he added many changes and modifications to his club operations. So lots more coding was done.
+    The treat for that is pending to this date.
+
+    Abhinav also went on to develop the website for his Batch's yearbook. https://saturnalia.ml, as well as implement QR code passes for
+    entry into Ocean pearl for the Socials night. 
+
+    If you're reading this, just drop me a fun email saying how awesome I am: abhinav4848 @ gmail .com (remove the spaces).
+
+    Signing off,
+
+    Dr. Abhinav Kumar
+    31st December, 2019.
+    -->";
 }
