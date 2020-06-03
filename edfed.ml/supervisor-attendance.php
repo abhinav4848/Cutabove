@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-include 'assets/acknowledgements.php';
-
-
 //if admin has accessed the page, see if the id has been sent by $_GET, then show the user data by $_GET['id']
 //if supervisor has logged in, show his own data using $_SESSION['id']
 if ($_SESSION['permission'] == 'admin') {

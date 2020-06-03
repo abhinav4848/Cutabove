@@ -1,13 +1,10 @@
-<!--
-    Abandoned
-    This was the old "all-people.php". Go to that page instead.
--->
-
-
 <?php
 session_start();
 
-include 'assets/acknowledgements.php';
+echo '<!--
+Abandoned
+This was the old "all-people.php". Go to that page instead.
+-->';
 
 if ($_SESSION['permission'] == 'admin' or $_SESSION['permission'] == 'supervisor') {
     include('connect-db.php');

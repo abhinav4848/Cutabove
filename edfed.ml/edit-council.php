@@ -1,7 +1,5 @@
 <?php
 session_start();
-include 'assets/acknowledgements.php';
-
 
 //doing this so purposeful malicious edit to the id parameter being passed through a form doesn't change data for the new id value that may have been inserted.
 if ($_SESSION['permission'] == 'admin' or ($_SESSION['permission'] == 'supervisor' and $_SESSION['id'] == $_GET['id'])) {

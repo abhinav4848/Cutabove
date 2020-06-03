@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'assets/acknowledgements.php';
 
 date_default_timezone_set("Asia/Kolkata");
 $getid = ''; //doing this since there are 2 ways a member's id can be worked on (admin & supervisor using get['id'] vs Member using session['id']. I needn't worry about which method is used once i set $getid to the id value through either method. Rest of the program uses getid ather than get['id'] or session['id']

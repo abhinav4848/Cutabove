@@ -1,7 +1,5 @@
 <?php
 session_start();
-include 'assets/acknowledgements.php';
-
 
 $stg1c_onthefly=''; //for enabling stage 2, this value is checked instead of database
 $stg2c_onthefly='';

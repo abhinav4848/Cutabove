@@ -1,7 +1,5 @@
 <?php
 session_start();
-include 'assets/acknowledgements.php';
-
 
 $error="";
 if ($_SESSION['permission'] == 'admin') {

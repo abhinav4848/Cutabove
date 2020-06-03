@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'assets/acknowledgements.php';
 
 $error="";
 
@@ -434,7 +433,7 @@ if (array_key_exists("type", $_GET)) {
                                     <label for="clg_reg" class="col-sm-2 col-form-label">Username</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="council_username"
-                                            name="council_username" placeholder="abhinavkumar" value=<?php if (isset($_GET['council_username'])) {
+                                            name="council_username" placeholder="ak" value=<?php if (isset($_GET['council_username'])) {
                                                 echo $_GET['council_username'];
                                             }?>>
                                         <?php
@@ -476,7 +475,7 @@ if (array_key_exists("type", $_GET)) {
                                     <label for="clg_reg" class="col-sm-2 col-form-label">Workshop id</label>
                                     <div class="col-sm-10">
                                         <input type="number" class="form-control" id="wk_id" name="wk_id"
-                                            placeholder="4848" value=<?php if (isset($_GET['wk_id'])) {
+                                            placeholder="1" value=<?php if (isset($_GET['wk_id'])) {
                                                 echo $_GET['wk_id'];
                                             }?>>
                                         <?php

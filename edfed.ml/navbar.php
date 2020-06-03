@@ -321,6 +321,12 @@
             </script>
             <?php
             }
+
+            if (date("Y")>'2020') {
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link" href="assets/acknowledgements.php" target="_blank"><i class="fas fa-heartbeat"></i> Acknowledgements</a>';
+                echo '</li>';
+            }
             ?>
         </ul>
         <div class="form-inline my-2 my-lg-0">

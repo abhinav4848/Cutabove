@@ -2,7 +2,6 @@
 session_start();
 $error="";
 include 'connect-db.php';
-// include 'assets/acknowledgements.php';
 
 if (array_key_exists("logout", $_GET)) {
     session_unset($_SESSION);
@@ -280,8 +279,14 @@ if (array_key_exists("submit", $_POST)) {
                         <input type="hidden" name="permission" value="admin">
                         <button type="submit" name="submit" class="btn btn-danger">Admin Log In</button>
                     </form>
-                    <p class="mt-5 mb-3 text-muted">&copy; 2018-<?php echo date("Y"); ?>, <a
-                            href="https://abhinavkr.com" target="_blank">Abhinav Kumar</a>, Amit Sattigeri </p>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2018-<?php echo date("Y"); ?>.
+                        <?php
+                        if (date("Y")>'2020') {
+                            echo '<a href="https://abhinavkr.com" target="_blank">Abhinav Kumar</a>, Amit Sattigeri (Batch of 2014)';
+                        }
+                    ?>
+                    </p>
+
                 </div><!-- Inner -->
             </div><!-- Middle -->
         </div><!-- outer -->
